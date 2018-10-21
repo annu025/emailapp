@@ -7,7 +7,7 @@ public class Email {
     private String lastName;
     private String password;
     private String department;
-    private int mailboxCapacity;
+    private int mailboxCapacity = 500;
     private String alternateEmail;
     private int defaultPasswordLength = 10;
     private String companySuffix = "mycompany.com";
@@ -58,10 +58,33 @@ public class Email {
         }
         return new String(password);
     }
-    // Set mailbox capacity
+    // SETTERS
+    // Set mailbox capacity - this is not necessary to be part of the constructor
+    public void setMailboxCapacity (int capacity){
+        this.mailboxCapacity = capacity;
+    }
+    // Set alternate email address - this is not necessary to be part of the constructor
+    public void setAlternateEmail (String alternateEmail){
+        this.alternateEmail = alternateEmail;
+    }
+    // Change password - this is not necessary to be part of the constructor
+    public void changePassword(String password){
+        this.password = password;
+    }
 
-    // Set alternate email address
+    // GETTERS
+    // Get mailbox capacity
+    public int getMailboxCapacity(){
+        return mailboxCapacity;
+    }
 
-    // Change password
+    // Get alternate email
+    public String getAlternateEmail() {
+        return alternateEmail;
+    }
 
+    // Get password
+    public String getPassword() {
+        return password;
+    }
 }
