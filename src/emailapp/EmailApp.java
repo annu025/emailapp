@@ -14,5 +14,7 @@ public class EmailApp {
 //        em1.getMailboxCapacity();
 //        em1.getPassword();
 
+        System.out.println(em1.showInfo());
+
     }
 }
